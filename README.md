@@ -1,4 +1,4 @@
-# TechMart - Full-Stack Ecommerce Website
+# VoltAura - Premium Electronics Ecommerce Website
 
 A modern, beautiful, and fully functional ecommerce website for electronics and gadgets built with Node.js, Express, MongoDB, and vanilla JavaScript.
 
@@ -61,7 +61,7 @@ A modern, beautiful, and fully functional ecommerce website for electronics and 
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd techmart-ecommerce
+   cd VoltAura-ecommerce
    ```
 
 2. **Install dependencies**
@@ -73,7 +73,7 @@ A modern, beautiful, and fully functional ecommerce website for electronics and 
    Create a `.env` file in the root directory:
    ```env
    PORT=3000
-   MONGODB_URI=mongodb://localhost:27017/techmart
+   MONGODB_URI=mongodb://localhost:27017/VoltAura
    JWT_SECRET=your-secret-key-here
    ```
 
@@ -243,7 +243,7 @@ The website is fully responsive and optimized for:
 ## 📁 Project Structure
 
 ```
-techmart-ecommerce/
+VoltAura-ecommerce/
 ├── assets/
 │   ├── brands/          # Brand logos
 │   ├── deals/           # Deal images
@@ -292,10 +292,10 @@ This project is licensed under the MIT License.
 ## 📞 Support
 
 For support and questions:
-- Email: support@techmart.com
+- Email: support@VoltAura.com
 - Phone: +91 98765 43210
-- Website: https://techmart.com
+- Website: https://VoltAura.com
 
 ---
 
-**TechMart** - Your trusted source for premium electronics and gadgets! 🚀 
+**VoltAura** - Your trusted source for premium electronics and gadgets! 🚀 
