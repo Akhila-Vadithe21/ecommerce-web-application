@@ -1,0 +1,42 @@
+:root[data-theme="volt"] {
+	--va-primary:#2d81ff; --va-primary-2:#ff4d6d; --va-accent:#ffd24c;
+	--va-bg-0:#0b1220; --va-bg-1:#0a1a2f; --va-surface:#121a2b; --va-card:#161f33;
+}
+
+:root[data-theme="ocean"] {
+	--va-primary:#00b2a9; --va-primary-2:#4f46e5; --va-accent:#22d3ee;
+	--va-bg-0:#041b1f; --va-bg-1:#071d2e; --va-surface:#0c2433; --va-card:#0f2a3d;
+}
+
+:root[data-theme="forest"] {
+	--va-primary:#10b981; --va-primary-2:#84cc16; --va-accent:#f59e0b;
+	--va-bg-0:#0b1a12; --va-bg-1:#0c2117; --va-surface:#10261b; --va-card:#122b1f;
+}
+
+:root[data-theme="royal"] {
+	--va-primary:#7c3aed; --va-primary-2:#f59e0b; --va-accent:#60a5fa;
+	--va-bg-0:#120b1f; --va-bg-1:#190f2d; --va-surface:#1f1538; --va-card:#24194a;
+}
+
+:root[data-theme="sunset"] {
+	--va-primary:#ff7e33; --va-primary-2:#ff4d8d; --va-accent:#ffd166;
+	--va-bg-0:#1f0b0b; --va-bg-1:#2a1111; --va-surface:#301515; --va-card:#3a1a1a;
+}
+
+:root[data-theme="mono"] {
+	--va-primary:#06b6d4; --va-primary-2:#64748b; --va-accent:#94a3b8;
+	--va-bg-0:#0c1118; --va-bg-1:#0f1520; --va-surface:#131a27; --va-card:#162035;
+}
+
+.theme-menu { position: relative; }
+.theme-btn { background: linear-gradient(135deg,var(--va-primary),var(--va-primary-2)); border:0; color:#fff; width:38px; height:38px; border-radius:10px; cursor:pointer; box-shadow:0 8px 20px rgba(0,0,0,.25); }
+.theme-dropdown { position:absolute; right:0; top:120%; background:var(--va-card); border:1px solid rgba(255,255,255,.12); border-radius:12px; padding:12px; display:none; z-index:3000; box-shadow:0 20px 40px rgba(0,0,0,.35); }
+.theme-menu:hover .theme-dropdown { display:block; }
+.theme-menu.open .theme-dropdown { display:block; }
+.theme-row { display:flex; gap:8px; margin-bottom:8px; }
+.theme-chip { background:linear-gradient(135deg,var(--c1),var(--c2)); color:#fff; border:0; padding:8px 10px; border-radius:10px; cursor:pointer; font-weight:700; font-size:.8rem; }
+.theme-toggle { display:block; color:var(--va-text-dim); font-size:.85rem; margin-top:6px; }
+
+/* Reduce animations */
+[data-reduce-anim="true"] * { animation:none !important; transition:none !important; }
+

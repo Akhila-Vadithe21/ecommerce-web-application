@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="voltaura-theme.css" />
+    <link rel="stylesheet" href="product-page.css" />
+    <title>AC</title>
+</head>
+
+<body>
+ 
+    </div>
+
+    <div class="product-detail">
+        <div class="pro-left">
+            <img src="assets/Arrival/arr-ac.jpg" alt="AC">
+        </div>
+        <div class="pro-right">
+            <h4>VoltAura ChillPro 1.5 Ton 5-Star Inverter Split AC</h4>
+            <ul>
+                <li>Deal Price: ₹44,490.00</li>
+                <li>Offer Price: ₹45,990.00</li>
+                <li>MRP: ₹77,990.00 (Inclusive of all taxes)</li>
+                <li>You Save: 43% (₹33,500)</li>
+                <li>EMIs from ₹2,136.09/month · FREE Shipping!</li>
+            </ul>
+            <div class="pro-button">
+                <button class="addBtn" id="addCart">ADD TO CART</button>
+                <button class="buyBtn" id="buyNow">BUY NOW</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="product-page-bridge.js"></script>
+    <script>
+    (function(){
+        const API_BASE='http://localhost:3000/api';
+        const product={ _id:'voltaura-chillpro-15', name:'VoltAura ChillPro 1.5T', price:44490, originalPrice:77990, category:'AC', image:'assets/Arrival/arr-ac.jpg'};
+        const toast=(m)=>{ const t=document.createElement('div'); t.className='toast'; t.textContent=m; document.body.appendChild(t); setTimeout(()=>t.remove(),2000); };
+        const addLocal=()=>{ const cart=JSON.parse(localStorage.getItem('va_cart')||'[]'); const i=cart.findIndex(x=>x.productId===product._id); if(i>-1) cart[i].quantity+=1; else cart.push({productId:product._id, quantity:1, product}); localStorage.setItem('va_cart', JSON.stringify(cart)); toast('Added to cart'); };
+        document.getElementById('addCart').addEventListener('click', async()=>{ const token=localStorage.getItem('token'); if(!token){ addLocal(); return; } try{ const r=await fetch(`${API_BASE}/cart/add`,{method:'POST', headers:{'Content-Type':'application/json','Authorization':`Bearer ${token}`}, body:JSON.stringify({productId:product._id, quantity:1})}); if(r.ok) toast('Added to cart'); else addLocal(); }catch(e){ addLocal(); } });
+        document.getElementById('buyNow').addEventListener('click',()=>{ document.getElementById('addCart').click(); toast('Proceed to checkout from cart'); });
+    })();
+    </script>
+
+</body>
+
+</html>
